@@ -104,6 +104,7 @@ margin: .5rem;
     color: #FFFFFF;
     text-decoration:none;
 }
+
 .section-carrusel{
     background-image: url('../img/bmw-m3-gtr\ -\ wallpaper.jpg');
     background-size: 100% 100%;
@@ -112,6 +113,7 @@ margin: .5rem;
     justify-content: center;
     display: flex;
     align-items: center;
+    
 }
 
 .justify-content-center{
@@ -135,4 +137,21 @@ margin: .5rem;
     max-height: 100%;
     box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
     border-radius: 25px;
+}
+
+/*descripcion vehiculos*/
+
+.fondo-desc{
+    background-color: #454545;
+    color: white;
+    text-align: center;
+    margin: 3rem;
+    border-radius: 25px;
+}
+
+.precio-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #3788AA;
 }
