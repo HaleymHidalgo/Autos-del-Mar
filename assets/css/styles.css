@@ -7,7 +7,7 @@ body{
     color: black;
     background-color: whitesmoke;
     text-align: center;
-    margin: 3rem auto;
+    margin: 2rem auto;
     height: auto;
     width: 450px;
     border-radius: 10px;
@@ -22,7 +22,7 @@ body{
     background-color:rgb(105, 103, 103);
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin: 0rem 3rem;
     border-radius: 25px;
 }
 
@@ -45,4 +45,62 @@ body{
     margin: 1rem;
     max-width:  15rem;
     max-height: 12rem;
+}
+
+/*botones*/
+.botones{
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.btn-cata{
+    background-color: #3788AA;
+    border-color: #3788AA;
+    margin: 0.1rem;
+}
+
+/*footer*/
+.footer{
+    text-align: center;
+    background-color: #202020;
+}
+
+.titulo-foot{
+    color: #3788AA;
+}
+
+.abajo{
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    justify-content: space-around;
+}
+
+.donde-encotrarnos{
+    height: auto;
+    width: 450px;
+}
+
+.quienes-somos{
+    height: auto;
+    width: 450px;
+    text-align: center;
+}
+
+.contactos{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 450px;
+    margin-bottom: 1rem;
+}
+
+.img-icon{
+margin: .5rem;
+}
+
+.contactos a{
+    color: #FFFFFF;
+    text-decoration:none;
 }
