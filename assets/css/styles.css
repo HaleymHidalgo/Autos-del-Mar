@@ -1,4 +1,109 @@
+body{
+    background-color: rgb(47, 46, 46);
+}
 
+/*titulo*/
+.titulo-cata{
+    color: black;
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 2rem auto;
+    height: auto;
+    width: 450px;
+    border-radius: 10px;
+}
+.contenedor-titulo{
+    display: flex;
+    justify-content: center;
+}
+
+/*cartas*/
+.card_catalogo{
+    background-color:rgb(105, 103, 103);
+    display: flex;
+    justify-content: center;
+    margin: 0rem 3rem;
+    border-radius: 25px;
+}
+
+.card{
+    width: 18rem;
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card a{
+    color:black;
+    text-decoration:none;
+}
+
+
+.card-img{
+    margin: 1rem;
+    max-width:  15rem;
+    max-height: 12rem;
+}
+
+/*botones*/
+.botones{
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.btn-cata{
+    background-color: #3788AA;
+    border-color: #3788AA;
+    margin: 0.1rem;
+}
+
+/*footer*/
+.footer{
+    text-align: center;
+    background-color: #202020;
+}
+
+.titulo-foot{
+    color: #3788AA;
+}
+
+.abajo{
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    justify-content: space-around;
+}
+
+.donde-encotrarnos{
+    height: auto;
+    width: 450px;
+}
+
+.quienes-somos{
+    height: auto;
+    width: 450px;
+    text-align: center;
+}
+
+.contactos{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 450px;
+    margin-bottom: 1rem;
+}
+
+.img-icon{
+margin: .5rem;
+}
+
+.contactos a{
+    color: #FFFFFF;
+    text-decoration:none;
+}
 .section-carrusel{
     background-image: url('../img/bmw-m3-gtr\ -\ wallpaper.jpg');
     background-size: 100% 100%;
