@@ -155,3 +155,42 @@ margin: .5rem;
     justify-content: space-around;
     color: #3788AA;
 }
+/*formulario vehiculo*/
+.formulario{
+margin: 1rem 5rem;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+color: #f0f0f0;
+}
+
+
+.formulario-img{
+    flex-direction: column;
+    display: flex;
+
+}
+
+.img-veh{
+    max-width: 30rem;
+    max-height: 30rem;
+    margin: .5rem auto;
+    border-radius: 25px;
+}
+
+.form-text{
+    color: #FFFFFF;
+}
+
+.encabezado-form{
+    text-align: center;
+}
+
+.color-h4{
+    color: #3788AA;
+}
+
+.btn-cotizar{
+    display: flex;
+    justify-content: center;
+}
