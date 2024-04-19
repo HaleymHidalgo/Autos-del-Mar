@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html"
-          ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Museo"
+          ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
         /></a>
         <button
           class="navbar-toggler"
@@ -29,18 +29,7 @@
           aria-label="Toggle navigation"
         ><span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./catalogo.html">Catalogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Nosotros.html">Nosotros</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li>
               <form class="buscador" role="search">
@@ -55,13 +44,31 @@
                 </button>
               </form>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./autentication/inicio_sesion.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./autentication/registro_sesion.html">Sing up</a>
-            </li>
           </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./catalogo.html">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item line-user">
+              <a class="nav-link">|</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"">Sing up</a>
+            </li>
+            <!-- no se vera hasta haberse autenticado -->
+            <li class="nav-item d-none">
+              <a class="nav-link" href="#"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo-login"></a>
+            </li>
+          </ul>  
         </div>
       </div>
     </nav>
@@ -120,46 +127,48 @@
     </section>
 
     <!-- Most Sales -->
-    <h1 class="titulo-cata">Lo más vendido</h1>
-    <div class="container-fluid">
-        <div class="card_catalogo row">
-            <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <a href="#">
-                    <img src="./assets/img/mustang-gt.jpg" class="card-img" alt="mustang-gt">
-                    <div class="card-body">
-                        <h5 class="card-title">Mustang-GT</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <a href="#">
-                    <img src="./assets/img/bmw-m3-gtr.jpg" class="card-img" alt="mustang-gt">
-                    <div class="card-body">
-                        <h5 class="card-title">BMW M3 GTR</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <a href="#">
-                    <img src="./assets/img/Mercedes-Benz-SLR-McLaren.jpg" class="card-img" alt="mustang-gt">
-                    <div class="card-body">
-                        <h5 class="card-title">Mercedes Benz SLR McLaren</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <a href="#">
-                    <img src="./assets/img/mitsubishi-eclipse-gt-v-6.jpg" class="card-img" alt="mustang-gt">
-                    <div class="card-body">
-                        <h5 class="card-title">Mitsubishi Eclipse GT</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+    <section>
+      <h1 class="titulo-cata">Lo más vendido</h1>
+      <div class="container-fluid">
+          <div class="card_catalogo row">
+              <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <a href="#">
+                      <img src="./assets/img/mustang-gt.jpg" class="card-img" alt="mustang-gt">
+                      <div class="card-body">
+                          <h5 class="card-title">Mustang-GT</h5>
+                      </div>
+                  </a>
+              </div>
+              <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <a href="#">
+                      <img src="./assets/img/bmw-m3-gtr.jpg" class="card-img" alt="mustang-gt">
+                      <div class="card-body">
+                          <h5 class="card-title">BMW M3 GTR</h5>
+                      </div>
+                  </a>
+              </div>
+              <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <a href="#">
+                      <img src="./assets/img/Mercedes-Benz-SLR-McLaren.jpg" class="card-img" alt="mustang-gt">
+                      <div class="card-body">
+                          <h5 class="card-title">Mercedes Benz SLR McLaren</h5>
+                      </div>
+                  </a>
+              </div>
+              <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                  <a href="#">
+                      <img src="./assets/img/mitsubishi-eclipse-gt-v-6.jpg" class="card-img" alt="mustang-gt">
+                      <div class="card-body">
+                          <h5 class="card-title">Mitsubishi Eclipse GT</h5>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </section>
 
   <!-- Footer -->
-  <div class="footer">
+  <section class="footer">
       <h1 class="titulo-foot">Automotora - Autos Del Mar</h1>
       <div class="abajo">
           <div class="donde-encotrarnos">
@@ -181,12 +190,13 @@
               <a href=""><img class="img-icon" src="./assets/img/envelope-at-fill.svg">E-Mail</a>
           </div>
       </div>
-  </div>
+  </section>
+
+  <!-- Script de Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
