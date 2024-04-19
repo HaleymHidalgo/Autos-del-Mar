@@ -7,14 +7,13 @@ body{
     color: black;
     background-color: whitesmoke;
     text-align: center;
+    padding: 10px;
     margin: 2rem auto;
-    height: auto;
-    width: 450px;
     border-radius: 10px;
 }
+
 .contenedor-titulo{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 /*cartas*/
@@ -24,6 +23,7 @@ body{
     justify-content: center;
     margin: 0rem 3rem;
     border-radius: 25px;
+    margin: 20px auto;
 }
 
 .card{
