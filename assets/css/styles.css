@@ -1,29 +1,32 @@
 body{
-    background-color: rgb(47, 46, 46);
+    background: #2D2D2D;
+    box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.3);
 }
 
 /*titulo*/
 .titulo-cata{
     color: black;
-    background-color: whitesmoke;
     text-align: center;
+    padding: 10px;
     margin: 2rem auto;
-    height: auto;
-    width: 450px;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+
 }
+
 .contenedor-titulo{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 /*cartas*/
 .card_catalogo{
-    background-color:rgb(105, 103, 103);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     margin: 0rem 3rem;
-    border-radius: 25px;
+    margin: 20px auto;
 }
 
 .card{
@@ -33,6 +36,9 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
 .card a{
@@ -63,7 +69,9 @@ body{
 /*footer*/
 .footer{
     text-align: center;
-    background-color: #202020;
+    background: #202020;
+    box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.6);
+
 }
 
 .titulo-foot{
@@ -193,4 +201,20 @@ color: #f0f0f0;
 .btn-cotizar{
     display: flex;
     justify-content: center;
+}
+
+/* Styles for navbar */
+
+.logo-icon{
+    width: 40px;
+}
+
+.logo-login{
+    width: 30px;
+}
+
+@media (width <= 992px){
+    .line-user{
+        display: none;
+    }
 }
