@@ -218,3 +218,59 @@ color: #f0f0f0;
         display: none;
     }
 }
+
+/* Styles for Profile */
+
+.seccion-profile{
+    background: #454545;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+}
+
+.seccion-datos{
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-compras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.datos-usuario .form-group{
+    margin: 10px 0;
+}
+
+.seccion-datos img{
+    width: 13rem;
+    margin: 20px;
+}
+
+.seccion-compras h2{
+    color: black;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.tabla-compras{
+    background-color: #d9d9d9;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.tabla-compras thead{
+    background-color: #9b9b9b;
+}
