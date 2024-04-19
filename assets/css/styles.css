@@ -194,3 +194,9 @@ color: #f0f0f0;
     display: flex;
     justify-content: center;
 }
+
+/* Styles for navbar */
+
+.logo-icon{
+    width: 40px;
+}
