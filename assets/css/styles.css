@@ -302,3 +302,12 @@ color: #f0f0f0;
     border-radius: 5px;
     margin: 4rem 10rem;
 }
+
+/*iniciar sesion*/
+
+.fondo-iniciar-ses{
+    background-color: #454545;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+}
