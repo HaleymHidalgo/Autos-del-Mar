@@ -1,6 +1,5 @@
 body{
     background: #2D2D2D;
-    box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.3);
 }
 
 /*titulo*/
@@ -347,4 +346,19 @@ color: #f0f0f0;
 
 .color-blanco{
     color: white !important;
+}
+
+/* Login / Sing up Pages */
+.seccion-acceso{
+    background: #454545;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+}
+
+.seccion-alternativa-acceso{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
