@@ -172,18 +172,30 @@ justify-content: space-around;
 color: #f0f0f0;
 }
 
+@media (width <= 1050px) {
+    .formulario-img{
+        display: none;
+    }
+}
 
 .formulario-img{
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .img-veh{
-    max-width: 30rem;
-    max-height: 30rem;
-    margin: .5rem auto;
+    width: 30rem;
+    margin: 20px auto;
     border-radius: 25px;
+}
+
+@media (width <= 690px){
+    .img-veh{
+        max-width: 15rem;
+    }
 }
 
 .form-text{
