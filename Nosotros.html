@@ -11,45 +11,65 @@
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img class="logo-icon" src="./assets/img/logo-museo.png"
-                        alt="Logo-Museo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse navbar-justify" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalogo.html">Catalogo</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li>
-                            <form class="buscador" role="search">
-                                <input class="bus me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button class="btn btn-outline-success" type="submit">
-                                    Search
-                                </button>
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./autentication/inicio_sesion.html">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./autentication/registro_sesion.html">Sing up</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+                ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
+            /></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                ><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li>
+                        <form class="buscador" role="search">
+                            <input
+                                class="bus me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button class="btn btn-outline-info" type="submit">
+                            Search
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item line-user">
+                        <a class="nav-link">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./iniciar_sesion.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registrar_sesion.html"">Sing up</a>
+                    </li>
+                    <!-- no se vera hasta haberse autenticado -->
+                    <li class="nav-item d-none">
+                        <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo-login"></a>
+                    </li>
+                </ul>  
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <div class="section-carrusel  ">
         <div class="container ">
@@ -86,7 +106,71 @@
                 
         </div>
     </div>
+    <div class="container">
+      <div class="row  ">
+        <div class="fondo-noso col-lg-12 col-sm-12 col-sm-6 col-xs-3">
+          <h1>Acerca de Nosotros</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
     
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.</p>
+      </div>
+      </div>
+    </div>
+    
+<section>
+  <div class="container fondo-preguntas col-lg-8 col-sm-5 col-sm-5 col-xs-5">
+    <div class="row ">
+      <div class=" ">
+        <h2>Preguntas Freguentes</h2>
+      </div>
+    </div>
+  </div>
+</section>
+  
+    
+    <div class="container ">
+      <div class="row">
+        <div class="fondo-noso  col-lg-12 col-sm-12 col-sm-6 col-xs-6">
+          <div class="fondo-examples col-lg-8 col-sm-8 col-sm-3 col-xs-3">
+            <h2>¿Examples n°1?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum</p>
+          </div>
+          <div class="fondo-examples col-lg-8 col-sm-8 col-sm-3 col-xs-3">
+            <h2>¿Examples n°2?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum</p>
+          </div>
+          <div class="fondo-examples col-lg-8 col-sm-8 col-sm-3 col-xs-3">
+            <h2>¿Examples n°3?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+
     <div class="footer">
         <h1 class="titulo-foot">Automotora - Autos Del Mar</h1>
         <div class="abajo">
