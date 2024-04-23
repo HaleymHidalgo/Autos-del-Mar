@@ -289,10 +289,13 @@ color: #f0f0f0;
 /*nosotros */
 
 .fondo-noso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #454545;
     color: white;
     text-align: center;
-    margin: 3rem;
     border-radius: 25px;
 }
 
@@ -304,6 +307,7 @@ color: #f0f0f0;
     margin: 0 15rem;
     color: black;
     border-radius: 25px;
+    max-width: 40rem;
 }
 
 .fondo-examples{
@@ -311,7 +315,20 @@ color: #f0f0f0;
     background-color: #FFFFFF;
     color: black;
     border-radius: 5px;
-    margin: 4rem 10rem;
+    margin: 0.8rem auto;
+}
+
+.pregunta-noso{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 25px;
+}
+
+.center-row{
+    align-items: center;
 }
 
 /*iniciar sesion*/
