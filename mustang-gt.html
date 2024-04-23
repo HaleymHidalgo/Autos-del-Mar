@@ -11,7 +11,65 @@
 </head>
 
 <body>
-
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+                ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
+            /></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                ><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li>
+                        <form class="buscador" role="search">
+                            <input
+                                class="bus me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button class="btn btn-outline-info" type="submit">
+                            Search
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item line-user">
+                        <a class="nav-link">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./iniciar_sesion.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registrar_sesion.html"">Sing up</a>
+                    </li>
+                    <!-- no se vera hasta haberse autenticado -->
+                    <li class="nav-item d-none">
+                        <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo-login"></a>
+                    </li>
+                </ul>  
+            </div>
+        </div>
+    </nav>  
     <div class="section-carrusel  ">
         <div class="container ">
             <div class="row justify-content-center">
@@ -19,16 +77,15 @@
                     <div id="carouselExampleAutoplaying" class="carousel slide size-carrucel " data-bs-ride="carousel">
                         <div class="carousel-inner carrucel">
                             <div class="carousel-item active">
-                                <img src="../assets/img/1997-toyota-supra-sold-for-176-000-at-auction.jpg"
+                                <img src="./assets/img/mustang-gt.jpg"
                                     class="d-block size-img-carrucel" alt="...">
                             </div>
-                            <div class="carousel-item">
-                                <img src="../assets/img/black_porsche_carrera_gt_car_4k_hd_cars-3840x2160.jpg"
-                                    class="d-block  size-img-carrucel" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/img/dodge_viper_acr_2-HD.jpg" class="d-block  size-img-carrucel"
-                                    alt="...">
+                            <div class="carousel-item active">
+                                <img src="./assets/img/mustang-gt.jpg"
+                                    class="d-block size-img-carrucel" alt="...">
+                            </div><div class="carousel-item active">
+                                <img src="./assets/img/mustang-gt.jpg"
+                                    class="d-block size-img-carrucel" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -55,55 +112,55 @@
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum</p>
-        <div class="precio-desc">
-            <h3>Precio:</h3>
-            <h3>Nr°Stock:</h3>
+        <div class="precio-desc row">
+            <h3 class="col-xl-6">Precio: $20.000.00 CLP</h3>
+            <h3 class="col-xl-6">Nr°Stock: 130 Unidades</h3>
         </div>
     </div>
 
-    <div class="formulario">
-        <form>
+    <div class=" row formulario">
+        <form class="col-xl-6 col-md-12 col-sm-12">
             <div class="encabezado-form">
             <h1>¿Interesado en comprar?</h1>
             <h4 class="color-h4">Cotiza con nosotros</h4>
             </div>
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre">
-              <div id="nombreHelp" class="form-text">Ingrese su nombre</div>
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
+                <div id="nombreHelp" class="form-text">Ingrese su nombre</div>
             </div>
 
             <div class="mb-3">
-              <label for="apellido" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="apellido">
-              <div id="apellidoHelp" class="form-text">Ingrese su Apellido</div>
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido">
+                <div id="apellidoHelp" class="form-text">Ingrese su Apellido</div>
             </div>
 
             <div class="mb-3">
                 <label for="rut" class="form-label">Rut</label>
                 <input type="text" class="form-control" id="rut">
                 <div id="rutHelp" class="form-text">Ingrese su Rut</div>
-              </div>
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label for="telefono" class="form-label">Telefono</label>
                 <input type="number" class="form-control" id="telefono">
-                <div id="telefonoHelp" class="form-text">Ingrese su Telefono</div>
-              </div>
+            <div id="telefonoHelp" class="form-text">Ingrese su Telefono</div>
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email">
                 <div id="emailHelp" class="form-text">Ingrese su Email</div>
-              </div>
+            </div>
 
 
 
             <div class="btn-cotizar">
                 <button type="submit" class="btn btn-primary">Cotizar Vehivulo</button>
             </div>
-          </form>
-        <div class="formulario-img">
+        </form>
+        <div class="col-xl-6 formulario-img">
             <img src="../assets/img/mustang-gt.jpg" alt="algo" class="img-veh">
             <img src="../assets/img/mustang-gt.jpg" alt="algo" class="img-veh">
         </div>
@@ -132,8 +189,10 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <!-- Script de Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"
+    ></script>
 </body>

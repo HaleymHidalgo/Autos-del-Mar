@@ -1,29 +1,31 @@
 body{
-    background-color: rgb(47, 46, 46);
+    background: #2D2D2D;
 }
 
 /*titulo*/
 .titulo-cata{
     color: black;
-    background-color: whitesmoke;
     text-align: center;
+    padding: 10px;
     margin: 2rem auto;
-    height: auto;
-    width: 450px;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+
 }
+
 .contenedor-titulo{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 /*cartas*/
 .card_catalogo{
-    background-color:rgb(105, 103, 103);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     margin: 0rem 3rem;
-    border-radius: 25px;
+    margin: 20px auto !important;
 }
 
 .card{
@@ -33,6 +35,9 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
 .card a{
@@ -45,6 +50,7 @@ body{
     margin: 1rem;
     max-width:  15rem;
     max-height: 12rem;
+    aspect-ratio: 16 / 9;
 }
 
 /*botones*/
@@ -63,7 +69,9 @@ body{
 /*footer*/
 .footer{
     text-align: center;
-    background-color: #202020;
+    background: #202020;
+    box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.6);
+
 }
 
 .titulo-foot{
@@ -106,14 +114,12 @@ margin: .5rem;
 }
 
 .section-carrusel{
-    background-image: url('../img/bmw-m3-gtr\ -\ wallpaper.jpg');
-    background-size: 100% 100%;
+    background-image: url('../img/bg-carretera.jpg');
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     justify-content: center;
-    display: flex;
-    align-items: center;
-    
+    padding: 20px 0px;
 }
 
 .justify-content-center{
@@ -135,6 +141,7 @@ margin: .5rem;
 .size-img-carrucel{
     max-width: 100%;
     max-height: 100%;
+    aspect-ratio: 16/9;
     box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
     border-radius: 25px;
 }
@@ -164,18 +171,30 @@ justify-content: space-around;
 color: #f0f0f0;
 }
 
+@media (width <= 1050px) {
+    .formulario-img{
+        display: none;
+    }
+}
 
 .formulario-img{
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .img-veh{
-    max-width: 30rem;
-    max-height: 30rem;
-    margin: .5rem auto;
+    width: 30rem;
+    margin: 20px auto;
     border-radius: 25px;
+}
+
+@media (width <= 690px){
+    .img-veh{
+        max-width: 15rem;
+    }
 }
 
 .form-text{
@@ -193,4 +212,153 @@ color: #f0f0f0;
 .btn-cotizar{
     display: flex;
     justify-content: center;
+}
+
+/* Styles for navbar */
+
+.logo-icon{
+    width: 40px;
+}
+
+.logo-login{
+    width: 30px;
+}
+
+@media (width <= 992px){
+    .line-user{
+        display: none;
+    }
+}
+
+/* Styles for Profile */
+
+.seccion-profile{
+    background: #454545;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+}
+
+.seccion-datos{
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-compras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.datos-usuario .form-group{
+    margin: 10px 0;
+}
+
+.seccion-datos img{
+    width: 13rem;
+    margin: 20px;
+}
+
+.seccion-compras h2{
+    color: black;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.tabla-compras{
+    background-color: #d9d9d9;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.tabla-compras thead{
+    background-color: #9b9b9b;
+}
+
+/*nosotros */
+
+.fondo-noso{
+    background-color: #454545;
+    color: white;
+    text-align: center;
+    margin: 3rem;
+    border-radius: 25px;
+}
+
+.fondo-preguntas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0 15rem;
+    color: black;
+    border-radius: 25px;
+}
+
+.fondo-examples{
+    text-align: center;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 5px;
+    margin: 4rem 10rem;
+}
+
+/*iniciar sesion*/
+
+.fondo-iniciar-ses{
+    background-color: #454545 !important; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+}
+
+
+
+/* Registrase*/
+.seccion-registrar{
+    background: #454545;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+    color: white;
+}
+
+.seccion-registrar-datos{
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-blanco{
+    color: white !important;
+}
+
+/* Login / Sing up Pages */
+.seccion-acceso{
+    background: #454545;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 50px auto;
+}
+
+.seccion-alternativa-acceso{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
