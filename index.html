@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Metadatos -->
         <meta charset="UTF-8" />
+        <meta name="author" content="Haleym Hidalgo, Angel Perugini, Alejandor Aranda">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <!-- Titulo website -->
+        <title>Autos del Mar</title>
+        <link rel="icon" type="image/x-con" href="./assets/img/isotipo-autos-del-mar.png">
+        <!-- CDN Bootstrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -15,86 +20,86 @@
     <body>
         <!-- Navbar Section -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"
-            ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
-            /></a>
-            <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            ><span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li>
-                <form class="buscador" role="search">
-                    <input
-                    class="bus me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    />
-                    <button class="btn btn-outline-info" type="submit">
-                    Search
-                    </button>
-                </form>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" href="./index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="./catalogo.html">Catalogo</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="./Nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item line-user">
-                <a class="nav-link">|</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="./iniciar_sesion.html">Login</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="./registrar_sesion.html"">Sing up</a>
-                </li>
-                <!-- no se vera hasta haberse autenticado -->
-                <li class="nav-item d-none">
-                <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo-login"></a>
-                </li>
-            </ul>  
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"
+                ><img class="logo" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
+                /></a>
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                ><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li>
+                            <form class="buscador" role="search">
+                                <input
+                                class="bus me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                />
+                                <button class="btn btn-outline-info" type="submit">
+                                Search
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./catalogo.html">Catalogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item line-user">
+                            <a class="nav-link">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iniciar_sesion.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./registrar_sesion.html"">Sign up</a>
+                        </li>
+                        <!-- no se vera hasta haberse autenticado -->
+                        <li class="nav-item d-none">
+                            <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo"></a>
+                        </li>
+                    </ul>  
+                </div>
             </div>
-        </div>
         </nav>
 
         <!-- Carousel Section -->
         <section class="container-max section-carrusel">
-                <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                     <img
                         src="./assets/img/bg-auto.webp"
-                        class="d-block size-img-carrucel w-75 mx-auto"
+                        class="d-block img-carrucel w-50 mx-auto"
                         alt="bg-auto"
                     />
                     </div>
                     <div class="carousel-item">
                     <img
                         src="./assets/img/bmw-m3-gtr.jpeg"
-                        class="d-block size-img-carrucel w-75 mx-auto"
+                        class="d-block img-carrucel w-50 mx-auto"
                         alt="bg-bmw"
                     />
                     </div>
                     <div class="carousel-item">
                     <img
                         src="./assets/img/black_porsche_carrera_gt_car_4k_hd_cars-3840x2160.jpg"
-                        class="d-block size-img-carrucel w-75 mx-auto"
+                        class="d-block img-carrucel w-50 mx-auto"
                         alt="bg-porsche"
                     />
                     </div>
@@ -123,19 +128,20 @@
                     ></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-                </div>
+            </div>
         </section>
 
         <!-- Most Sales -->
-        <section class="section-cars">
-        <h1 class="titulo-cata">Lo más vendido</h1>
+        <section class="fondo-seccion">
+        <h1 class="titulo-seccion">Lo más vendido</h1>
         <div class="container-fluid">
-            <div class="card_catalogo row">
-                <div class="card col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="row flex-row-center">
+                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
                     <a href="./mustang-gt.html">
                         <img src="./assets/img/mustang-gt.jpg" class="card-img" alt="mustang-gt">
                         <div class="card-body">
                             <h5 class="card-title">Mustang-GT</h5>
+                            <p>Ford</p>
                         </div>
                     </a>
                 </div>
@@ -143,7 +149,8 @@
                     <a href="./mustang-gt.html">
                         <img src="./assets/img/bmw-m3-gtr.jpg" class="card-img" alt="mustang-gt">
                         <div class="card-body">
-                            <h5 class="card-title">BMW M3 GTR</h5>
+                            <h5 class="card-title">M3 GTR</h5>
+                            <p>BMW</p>
                         </div>
                     </a>
                 </div>
@@ -151,7 +158,8 @@
                     <a href="./mustang-gt.html">
                         <img src="./assets/img/Mercedes-Benz-SLR-McLaren.jpg" class="card-img" alt="mustang-gt">
                         <div class="card-body">
-                            <h5 class="card-title">Mercedes Benz SLR McLaren</h5>
+                            <h5 class="card-title">SLR McLaren</h5>
+                            <p>Mercedes Benz</p>
                         </div>
                     </a>
                 </div>
@@ -159,7 +167,8 @@
                     <a href="./mustang-gt.html">
                         <img src="./assets/img/mitsubishi-eclipse-gt-v-6.jpg" class="card-img" alt="mustang-gt">
                         <div class="card-body">
-                            <h5 class="card-title">Mitsubishi Eclipse GT</h5>
+                            <h5 class="card-title">Eclipse GT</h5>
+                            <p>Mitsubishi</p>
                         </div>
                     </a>
                 </div>
@@ -196,7 +205,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <!-- Modulos Propios -->
-        <script type="module" src="./assets/js/script.js"></script>
     </body>
 </html>

@@ -2,42 +2,76 @@ body{
     background: #2D2D2D;
 }
 
-/*titulo*/
-.titulo-cata{
-    color: black;
+/* Navbar */
+.logo{
+    width: 35px;
+}
+
+@media (width <= 992px){
+    .line-user{
+        display: none;
+    }
+}
+
+/* Carrucel general */
+.section-carrusel{
+    background-image: url('../img/bg-carretera.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0.8rem 0px;
+}
+
+.img-carrucel{
+    aspect-ratio: 16/9;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 100%;
+}
+
+/* Catalogo */
+.titulo-seccion{
+    background-color: #D9D9D9;
     text-align: center;
     padding: 10px;
-    margin: 2rem auto;
-    background: #D9D9D9;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    margin: .8rem 20%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-
 }
 
-.contenedor-titulo{
-    text-align: center;
+.parrafo-seccion{
+    background-color: #d9d9d9;
+    text-align:center;
+    padding: 1rem 3rem;
+    margin: 1rem 15%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
-/*cartas*/
-.card_catalogo{
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    margin: 0rem 3rem;
-    margin: 20px auto !important;
-}
-
+/* Cards */
 .card{
-    width: 18rem;
-    margin: 1rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     text-align: center;
     background: #D9D9D9;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+    margin: 20px;
+    width: 18rem
+}
+
+.fondo-seccion{
+    background-color: #424242;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    margin: 20px 1.5rem;
+    padding: 10px;
+}
+
+.cotenedor-cartas div{
+    display: flex;
+    justify-content: center;
 }
 
 .card a{
@@ -45,25 +79,78 @@ body{
     text-decoration:none;
 }
 
-
 .card-img{
-    margin: 1rem;
-    max-width:  15rem;
-    max-height: 12rem;
-    aspect-ratio: 16 / 9;
+    margin: 1rem auto;
+    max-width: 15rem;
+    aspect-ratio: 16/9;
 }
 
-/*botones*/
-.botones{
-    display: flex;
-    justify-content: center;
-    margin: .5rem;
-}
-
-.btn-cata{
+.boton{
     background-color: #3788AA;
     border-color: #3788AA;
-    margin: 0.1rem;
+    margin: 0.5rem;
+}
+
+/* Nosotros Sección */
+.articulo-informativo{
+    text-align: center;
+    background-color: #D9D9D9;
+    margin: 1rem 2rem;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile */
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-formulario{
+    background-color: #454545; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 20px 0;
+}
+
+.img-user{
+    width: 12rem;
+    margin: 20px;
+}
+
+/* ----------------- Old Code ---------------- */
+/* Styles for Profile */
+
+
+
+.seccion-compras h2{
+    color: black;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.tabla-compras{
+    background-color: #d9d9d9;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.tabla-compras thead{
+    background-color: #9b9b9b;
 }
 
 /*footer*/
@@ -105,45 +192,12 @@ body{
 }
 
 .img-icon{
-margin: .5rem;
+    margin: .5rem;
 }
 
 .contactos a{
     color: #FFFFFF;
     text-decoration:none;
-}
-
-.section-carrusel{
-    background-image: url('../img/bg-carretera.jpg');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    padding: 20px 0px;
-}
-
-.justify-content-center{
-    justify-content: center;
-}
-
-.centrar{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-}
-.size-carrucel{
-    width: 80%;
-    max-width: 1000px;
-}
-
-.size-img-carrucel{
-    max-width: 100%;
-    max-height: 100%;
-    aspect-ratio: 16/9;
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
 }
 
 /*descripcion vehiculos*/
@@ -162,6 +216,7 @@ margin: .5rem;
     justify-content: space-around;
     color: #3788AA;
 }
+
 /*formulario vehiculo*/
 .formulario{
 margin: 1rem 5rem;
@@ -212,170 +267,4 @@ color: #f0f0f0;
 .btn-cotizar{
     display: flex;
     justify-content: center;
-}
-
-/* Styles for navbar */
-
-.logo-icon{
-    width: 40px;
-}
-
-.logo-login{
-    width: 30px;
-}
-
-@media (width <= 992px){
-    .line-user{
-        display: none;
-    }
-}
-
-/* Styles for Profile */
-
-.seccion-profile{
-    background: #454545;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-}
-
-.seccion-datos{
-    background-color: rgba(255, 0, 0, 0);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seccion-compras{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.datos-usuario .form-group{
-    margin: 10px 0;
-}
-
-.seccion-datos img{
-    width: 13rem;
-    margin: 20px;
-}
-
-.seccion-compras h2{
-    color: black;
-    background-color: #d9d9d9;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.tabla-compras{
-    background-color: #d9d9d9;
-    text-align: center;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
-}
-
-.tabla-compras thead{
-    background-color: #9b9b9b;
-}
-
-/*nosotros */
-
-.fondo-noso{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #454545;
-    color: white;
-    text-align: center;
-    border-radius: 25px;
-}
-
-.fondo-preguntas{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFFFFF;
-    margin: 0 15rem;
-    color: black;
-    border-radius: 25px;
-    max-width: 40rem;
-}
-
-.fondo-examples{
-    text-align: center;
-    background-color: #FFFFFF;
-    color: black;
-    border-radius: 5px;
-    margin: 0.8rem auto;
-}
-
-.pregunta-noso{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFFFFF;
-    color: black;
-    border-radius: 25px;
-}
-
-.center-row{
-    align-items: center;
-}
-
-/*iniciar sesion*/
-
-.fondo-iniciar-ses{
-    background-color: #454545 !important; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-}
-
-
-
-/* Registrase*/
-.seccion-registrar{
-    background: #454545;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-    color: white;
-}
-
-.seccion-registrar-datos{
-    background-color: rgba(255, 0, 0, 0);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.color-blanco{
-    color: white !important;
-}
-
-/* Login / Sing up Pages */
-.seccion-acceso{
-    background: #454545;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-}
-
-.seccion-alternativa-acceso{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
 }
