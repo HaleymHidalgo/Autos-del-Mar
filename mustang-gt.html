@@ -2,12 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Haleym Hidalgo, Angel Perugini, Alejandor Aranda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titulo website -->
+    <title>Autos del Mar</title>
+    <link rel="icon" type="image/x-con" href="./assets/img/isotipo-autos-del-mar.png">
+    <!-- CDN Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
@@ -15,27 +24,27 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"
-                ><img class="logo-icon" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
+            ><img class="logo" src="./assets/img/isotipo-autos-del-mar.png" alt="Logo-Autos-del-mar"
             /></a>
             <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                ><span class="navbar-toggler-icon"></span>
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            ><span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between cont-items-nav" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li>
                         <form class="buscador" role="search">
                             <input
-                                class="bus me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
+                            class="bus me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
                             />
                             <button class="btn btn-outline-info" type="submit">
                             Search
@@ -60,111 +69,129 @@
                         <a class="nav-link" href="./iniciar_sesion.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./registrar_sesion.html"">Sing up</a>
+                        <a class="nav-link" href="./registrar_sesion.html"">Sign up</a>
                     </li>
                     <!-- no se vera hasta haberse autenticado -->
                     <li class="nav-item d-none">
-                        <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo-login"></a>
+                        <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo"></a>
                     </li>
                 </ul>  
             </div>
         </div>
-    </nav>  
-    <div class="section-carrusel  ">
-        <div class="container ">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 centrar">
-                    <div id="carouselExampleAutoplaying" class="carousel slide size-carrucel " data-bs-ride="carousel">
-                        <div class="carousel-inner carrucel">
-                            <div class="carousel-item active">
-                                <img src="./assets/img/mustang-gt.jpg"
-                                    class="d-block size-img-carrucel" alt="...">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="./assets/img/mustang-gt.jpg"
-                                    class="d-block size-img-carrucel" alt="...">
-                            </div><div class="carousel-item active">
-                                <img src="./assets/img/mustang-gt.jpg"
-                                    class="d-block size-img-carrucel" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section class="container-max section-carrusel">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img
+                    src="./assets/img/mustang-gt.jpg"
+                    class="d-block img-carrucel w-50 mx-auto"
+                    alt="bg-auto"
+                />
                 </div>
-
+                <div class="carousel-item">
+                <img
+                    src="./assets/img/mustang-gt.jpg"
+                    class="d-block img-carrucel w-50 mx-auto"
+                    alt="bg-bmw"
+                />
+                </div>
+                <div class="carousel-item">
+                <img
+                    src="./assets/img/mustang-gt.jpg"
+                    class="d-block img-carrucel w-50 mx-auto"
+                    alt="bg-porsche"
+                />
+                </div>
             </div>
-
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+            >
+                <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+            >
+                <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </div>
-    <div class="fondo-desc">
-        <h1>Mustang GT</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    </section>
+
+    <!-- Información de Producto -->
+    <section class="fondo-seccion">
+        <h1 class="titulo-seccion">Mustang GT</h1>
+        <p class="parrafo-seccion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum</p>
-        <div class="precio-desc row">
-            <h3 class="col-xl-6">Precio: $20.000.00 CLP</h3>
-            <h3 class="col-xl-6">Nr°Stock: 130 Unidades</h3>
+        <div id="info-producto" class="flex-row-center justify-content-around texto-azul">
+            <h3 class="">Precio: $20.000.00 CLP</h3>
+            <h3 class="">Nr°Stock: 130 Unidades</h3>
         </div>
-    </div>
+    </section>
 
-    <div class=" row formulario">
-        <form class="col-xl-6 col-md-12 col-sm-12">
-            <div class="encabezado-form">
-            <h1>¿Interesado en comprar?</h1>
-            <h4 class="color-h4">Cotiza con nosotros</h4>
+    <!-- Formulario de Compra -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <form class="col-xl-7 col-md-12 col-sm-12">
+                    <div class="titulo-seccion">
+                        <h1 class="">¿Interesado en comprar?</h1>
+                        <h4 class="texto-azul">Cotiza con nosotros</h4>
+                    </div>
+                    <div class="mx-5 mt-4">
+                        <label for="nombre" class="form-label texto-blanco">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+        
+                    <div class="mx-5 mt-4">
+                        <label for="apellido" class="form-label texto-blanco">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Ingrese su Apellido">
+                    </div>
+        
+                    <div class="mx-5 mt-4">
+                        <label for="rut" class="form-label texto-blanco">Rut</label>
+                        <input type="text" class="form-control" id="rut" placeholder="Ingrese su Rut">
+                    </div>
+        
+                    <div class="mx-5 mt-4">
+                        <label for="telefono" class="form-label texto-blanco">Telefono</label>
+                        <input type="number" class="form-control" id="telefono" placeholder="Ingrese su Telefono">
+                    </div>
+        
+                    <div class="mx-5 mt-4">
+                        <label for="email" class="form-label texto-blanco">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su Email">
+                    </div>
+        
+                    <div class="flex-row-center m-2">
+                        <button class="btn btn-primary boton" type="submit">Cotizar Vehiculo</button>
+                    </div>
+                </form>
+                <div class="col-xl-5 flex-column-center">
+                    <h2 class="titulo-seccion">Imagenes del Vehiculo</h2>
+                    <img src="../assets/img/mustang-gt.jpg" alt="algo" class="img-carrucel">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre">
-                <div id="nombreHelp" class="form-text">Ingrese su nombre</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido">
-                <div id="apellidoHelp" class="form-text">Ingrese su Apellido</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="rut" class="form-label">Rut</label>
-                <input type="text" class="form-control" id="rut">
-                <div id="rutHelp" class="form-text">Ingrese su Rut</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Telefono</label>
-                <input type="number" class="form-control" id="telefono">
-            <div id="telefonoHelp" class="form-text">Ingrese su Telefono</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
-                <div id="emailHelp" class="form-text">Ingrese su Email</div>
-            </div>
-
-
-
-            <div class="btn-cotizar">
-                <button type="submit" class="btn btn-primary">Cotizar Vehivulo</button>
-            </div>
-        </form>
-        <div class="col-xl-6 formulario-img">
-            <img src="../assets/img/mustang-gt.jpg" alt="algo" class="img-veh">
-            <img src="../assets/img/mustang-gt.jpg" alt="algo" class="img-veh">
         </div>
-    </div>
+    </section>
 
     <div class="footer">
         <h1 class="titulo-foot">Automotora - Autos Del Mar</h1>

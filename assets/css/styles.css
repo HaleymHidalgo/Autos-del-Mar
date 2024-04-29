@@ -140,6 +140,18 @@ body{
     color: white;;
 }
 
+.texto-azul{
+    color: #3788AA;
+}
+
+@media (width <= 666px) {
+    #info-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* ----------------- Old Code ---------------- */
 /* Styles for Profile */                                     
 
@@ -149,10 +161,6 @@ body{
     background: #202020;
     box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.6);
 
-}
-
-.titulo-foot{
-    color: #3788AA;
 }
 
 .abajo{
