@@ -34,7 +34,7 @@ body{
     background-color: #D9D9D9;
     text-align: center;
     padding: 10px;
-    margin: .8rem 20%;
+    margin: 1.8rem 20%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
@@ -43,7 +43,7 @@ body{
     background-color: #d9d9d9;
     text-align:center;
     padding: 1rem 3rem;
-    margin: 1rem 15%;
+    margin: 2rem 15%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
@@ -127,19 +127,6 @@ body{
     margin: 20px;
 }
 
-/* ----------------- Old Code ---------------- */
-/* Styles for Profile */
-
-
-
-.seccion-compras h2{
-    color: black;
-    background-color: #d9d9d9;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
 .tabla-compras{
     background-color: #d9d9d9;
     text-align: center;
@@ -149,9 +136,12 @@ body{
     margin-bottom: 20px;
 }
 
-.tabla-compras thead{
-    background-color: #9b9b9b;
+.texto-blanco{
+    color: white;;
 }
+
+/* ----------------- Old Code ---------------- */
+/* Styles for Profile */                                     
 
 /*footer*/
 .footer{
