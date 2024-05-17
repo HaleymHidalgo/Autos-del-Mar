@@ -96,8 +96,9 @@ a{
 
 .card-img{
     margin: 1rem auto;
-    max-width: 15rem;
+    max-width: 14rem;
     aspect-ratio: 16/9;
+    background-color: white;
 }
 
 .boton{
