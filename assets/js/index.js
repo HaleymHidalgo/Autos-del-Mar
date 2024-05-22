@@ -10,7 +10,6 @@ const setLocalData = async() => {
         .then( (data) => {
             //Parseamos el JSON a STRING para guardarlo en LocalStorage
             localStorage.setItem("carsList", JSON.stringify(data))
-            console.log(data);
         })
         .catch( (error => console.log("Error: ", error)))
 }
