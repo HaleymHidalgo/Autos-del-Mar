@@ -2,226 +2,9 @@ body{
     background: #2D2D2D;
 }
 
-/*titulo*/
-.titulo-cata{
-    color: black;
-    text-align: center;
-    padding: 10px;
-    margin: 2rem auto;
-    background: #D9D9D9;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-
-}
-
-.contenedor-titulo{
-    text-align: center;
-}
-
-/*cartas*/
-.card_catalogo{
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    margin: 0rem 3rem;
-    margin: 20px auto;
-}
-
-.card{
-    width: 18rem;
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: #D9D9D9;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-}
-
-.card a{
-    color:black;
-    text-decoration:none;
-}
-
-
-.card-img{
-    margin: 1rem;
-    max-width:  15rem;
-    max-height: 12rem;
-}
-
-/*botones*/
-.botones{
-    display: flex;
-    justify-content: center;
-    margin: .5rem;
-}
-
-.btn-cata{
-    background-color: #3788AA;
-    border-color: #3788AA;
-    margin: 0.1rem;
-}
-
-/*footer*/
-.footer{
-    text-align: center;
-    background: #202020;
-    box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.6);
-
-}
-
-.titulo-foot{
-    color: #3788AA;
-}
-
-.abajo{
-    display: flex;
-    flex-direction: row;
-    color: #FFFFFF;
-    justify-content: space-around;
-}
-
-.donde-encotrarnos{
-    height: auto;
-    width: 450px;
-}
-
-.quienes-somos{
-    height: auto;
-    width: 450px;
-    text-align: center;
-}
-
-.contactos{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 450px;
-    margin-bottom: 1rem;
-}
-
-.img-icon{
-margin: .5rem;
-}
-
-.contactos a{
-    color: #FFFFFF;
-    text-decoration:none;
-}
-
-.section-carrusel{
-    background-image: url('../img/bmw-m3-gtr\ -\ wallpaper.jpg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    
-}
-
-.justify-content-center{
-    justify-content: center;
-}
-
-.centrar{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-}
-.size-carrucel{
-    width: 80%;
-    max-width: 1000px;
-}
-
-.size-img-carrucel{
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-}
-
-/*descripcion vehiculos*/
-
-.fondo-desc{
-    background-color: #454545;
-    color: white;
-    text-align: center;
-    margin: 3rem;
-    border-radius: 25px;
-}
-
-.precio-desc{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: #3788AA;
-}
-/*formulario vehiculo*/
-.formulario{
-margin: 1rem 5rem;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-color: #f0f0f0;
-}
-
-@media (width <= 1050px) {
-    .formulario-img{
-        display: none;
-    }
-}
-
-.formulario-img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.img-veh{
-    width: 30rem;
-    margin: 20px auto;
-    border-radius: 25px;
-}
-
-@media (width <= 690px){
-    .img-veh{
-        max-width: 15rem;
-    }
-}
-
-.form-text{
-    color: #FFFFFF;
-}
-
-.encabezado-form{
-    text-align: center;
-}
-
-.color-h4{
-    color: #3788AA;
-}
-
-.btn-cotizar{
-    display: flex;
-    justify-content: center;
-}
-
-/* Styles for navbar */
-
-.logo-icon{
-    width: 40px;
-}
-
-.logo-login{
-    width: 30px;
+/* Navbar */
+.logo{
+    width: 35px;
 }
 
 @media (width <= 992px){
@@ -230,46 +13,130 @@ color: #f0f0f0;
     }
 }
 
-/* Styles for Profile */
+@media (width <= 666px) {
+    #info-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-.seccion-profile{
-    background: #454545;
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Carrucel general */
+.section-carrusel{
+    background-image: url('../img/bg-carretera.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0.8rem 0px;
+}
+
+.img-carrucel{
+    aspect-ratio: 16/9;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 100%;
+}
+
+/* Catalogo */
+.titulo-seccion{
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 10px;
+    margin: 1.8rem 20%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.parrafo-seccion{
+    background-color: #d9d9d9;
+    text-align:center;
+    padding: 1rem 3rem;
+    margin: 2rem 15%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Cards */
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px;
+    width: 18rem
+}
+
+.fondo-seccion{
+    background-color: #424242;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    margin: 20px 1.5rem;
+    padding: 10px;
+}
+
+.cotenedor-cartas div{
+    display: flex;
+    justify-content: center;
+}
+
+.card a{
+    color:black;
+    text-decoration:none;
+}
+
+.card-img{
+    margin: 1rem auto;
+    max-width: 15rem;
+    aspect-ratio: 16/9;
+}
+
+.boton{
+    background-color: #3788AA;
+    border-color: #3788AA;
+    margin: 0.5rem;
+}
+
+/* Nosotros Sección */
+.articulo-informativo{
+    text-align: center;
+    background-color: #D9D9D9;
+    margin: 1rem 2rem;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile */
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-formulario{
+    background-color: #454545; 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     max-width: 40rem;
-    margin: 50px auto;
+    margin: 2rem auto;
+    padding: 20px 0;
 }
 
-.seccion-datos{
-    background-color: rgba(255, 0, 0, 0);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seccion-compras{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.datos-usuario .form-group{
-    margin: 10px 0;
-}
-
-.seccion-datos img{
-    width: 13rem;
-    margin: 20px;
-}
-
-.seccion-compras h2{
-    color: black;
-    background-color: #d9d9d9;
-    padding: 10px;
-    border-radius: 10px;
+.img-user{
+    width: 12rem;
     margin: 20px;
 }
 
@@ -282,83 +149,19 @@ color: #f0f0f0;
     margin-bottom: 20px;
 }
 
-.tabla-compras thead{
-    background-color: #9b9b9b;
+.texto-blanco{
+    color: white;;
 }
 
-/*nosotros */
-
-.fondo-noso{
-    background-color: #454545;
-    color: white;
-    text-align: center;
-    margin: 3rem;
-    border-radius: 25px;
+.texto-gris{
+    color: rgba(175, 175, 175, 0.705);;
 }
 
-.fondo-preguntas{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFFFFF;
-    margin: 0 15rem;
-    color: black;
-    border-radius: 25px;
+.texto-azul{
+    color: #3788AA;
 }
 
-.fondo-examples{
-    text-align: center;
-    background-color: #FFFFFF;
-    color: black;
-    border-radius: 5px;
-    margin: 4rem 10rem;
-}
-
-/*iniciar sesion*/
-
-.fondo-iniciar-ses{
-    background-color: #454545 !important; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-}
-
-
-
-/* Registrase*/
-.seccion-registrar{
-    background: #454545;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-    color: white;
-}
-
-.seccion-registrar-datos{
-    background-color: rgba(255, 0, 0, 0);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.color-blanco{
-    color: white !important;
-}
-
-/* Login / Sing up Pages */
-.seccion-acceso{
-    background: #454545;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 50px auto;
-}
-
-.seccion-alternativa-acceso{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.no-lista-style{
+    list-style: none;
+    padding: 0;
 }
