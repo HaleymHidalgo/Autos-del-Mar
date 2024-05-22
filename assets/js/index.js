@@ -5,15 +5,14 @@ import { addCards } from "./addCards.js";
 
 
 //Obtiene y guarda en LocalStorage la Data de la API
-const setLocalData = async() => {
-    await getAutos()
-        .then( (data) => {
-            //Parseamos el JSON a STRING para guardarlo en LocalStorage
-            localStorage.setItem("carsList", JSON.stringify(data))
-        })
-        .catch( (error => console.log("Error: ", error)))
+try {
+    if(localStorage.getItem("carsJson") === null){
+        
+    }
+} catch (error) {
+    
 }
-setLocalData();
+
 
 //Añade las 4 trajetas al html
 addCards(4);
