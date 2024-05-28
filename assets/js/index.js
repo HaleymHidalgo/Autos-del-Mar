@@ -6,11 +6,11 @@ import { addCards } from "./addCards.js";
 if(sessionStorage.getItem('carsList') === null){
     getCars()
     .then((data) =>  {
-        console.log('ok');
         sessionStorage.setItem("carsList", JSON.stringify(data))
+        addCards(4, data)
     })
     .catch((error) => console.log('Error al guardar los vehiculos: ',error))
+}else{
+    const vehiculos = JSON.parse(sessionStorage.getItem("carsList"))
+    addCards(4, vehiculos)
 }
-
-//Añade las 4 trajetas al html
-addCards(4);

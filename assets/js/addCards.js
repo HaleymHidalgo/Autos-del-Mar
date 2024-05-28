@@ -1,6 +1,5 @@
-export const addCards = (nCards) => {
+export const addCards = (nCards, vehiculos) => {
     //Obtenemos el arreglo de vehiculos
-    const vehiculos = JSON.parse(sessionStorage.getItem('carsList'));
     const lastVehLoad = 0;
 
     //Obtenemos el contenedor de cartas
