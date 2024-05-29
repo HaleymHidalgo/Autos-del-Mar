@@ -6,8 +6,10 @@ import { addCards } from "./addCards.js";
 if(sessionStorage.getItem('carsList') === null){
     getCars()
     .then((data) =>  {
-        sessionStorage.setItem("carsList", JSON.stringify(data))
-        addCards(4, data)
+        if(data !== undefined){
+            sessionStorage.setItem("carsList", JSON.stringify(data))
+            addCards(4, data)
+        }
     })
     .catch((error) => console.log('Error al guardar los vehiculos: ',error))
 }else{

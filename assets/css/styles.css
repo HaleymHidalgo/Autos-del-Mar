@@ -73,6 +73,9 @@ a{
     margin: 20px;
     width: 18rem
 }
+.card:hover{
+    cursor: pointer;
+}
 
 .fondo-seccion{
     background-color: #424242;    
@@ -167,4 +170,9 @@ a{
 .no-lista-style{
     list-style: none;
     padding: 0;
+}
+
+.footer{
+    background: #202020;
+    box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.4);
 }

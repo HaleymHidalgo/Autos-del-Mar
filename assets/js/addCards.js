@@ -1,3 +1,5 @@
+import { viewProduct } from "./viewProduct.js";
+
 export const addCards = (nCards, vehiculos) => {
     //Obtenemos el arreglo de vehiculos
     const lastVehLoad = 0;
@@ -26,7 +28,7 @@ const createCard = (vehiculo) => {
 
     const card = document.createElement("div");
     card.classList.add("card");
-    //Aqui va un Event Listener
+    card.addEventListener('click', () => viewProduct(vehiculo))
 
     const image = document.createElement("img");
     image.classList.add("card-img");
