@@ -30,6 +30,7 @@ const createNav = () => {
                             </form>
                         </li>
                     </ul>
+                    
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="./index.html">Inicio</a>
@@ -40,6 +41,11 @@ const createNav = () => {
                         <li class="nav-item">
                             <a class="nav-link" href="./Nosotros.html">Nosotros</a>
                         </li>
+
+                        <li class="nav-item">
+                        <a href="./carrito.html"><img class="logo" src="./assets/img/logo-carrito.png" alt="logo-carrito"></a>
+                        </li>
+                        
                         <li class="nav-item line-user">
                             <a class="nav-link">|</a>
                         </li>
