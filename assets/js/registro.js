@@ -37,7 +37,9 @@ function checkInputs() {
 
     if(rutValue === '') {
 		setErrorFor(rut, 'rut necesario');
-	} else {
+	} else if (!isRut(rutValue)){
+        setErrorFor(rut, 'No ingreso un rut valido ej:(99.999.999-k)');
+    } else {
 		setSuccessFor(rut);
 	}
 
@@ -84,4 +86,8 @@ export function setSuccessFor(input) {
 
 export function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+export function isRut(rut) {
+	return /^(\d{1,2}(?:[\.]?\d{3}){2}-[\dkK])$/.test(rut);
 }
