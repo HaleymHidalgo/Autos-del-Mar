@@ -32,7 +32,7 @@ const createCard = (vehiculo) => {
 
     const image = document.createElement("img");
     image.classList.add("card-img");
-    image.src = img;
+    image.src = img[0];
     image.alt = modelo;
 
     const cardBody = document.createElement("div");
