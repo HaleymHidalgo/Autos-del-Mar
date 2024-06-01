@@ -1,7 +1,7 @@
 const carrito = [];
 
-    document.querySelector("#agregar").forEach(button => {
-        button.addEventListener("click", agregarcarrito());
+    document.querySelectorAll(".agregar").forEach(button => {
+        button.addEventListener("click", agregarcarrito);
 
         console.log(button );
     }); 
@@ -9,14 +9,14 @@ const carrito = [];
 
 
     function agregarcarrito(event) {
-        const producto = event.target.parentElement.parentElement;
-        const nombre = producto.data.nombre;
-        const precio = parseFloat(producto.data.precio);
-        const stock = parseInt(producto.data.stock);
+        const producto = event.target.closest('.producto');
+        const nombre = producto.dataset.nombre;
+        const precio = parseFloat(producto.dataset.precio);
+        const stock = parseInt(producto.dataset.stock);
         
         if (stock > 0) {
             carrito.push({nombre, precio});
-            producto.data.stock = stock - 1;
+            producto.dataset.stock = stock - 1;
             actualizarCarrito();
         }
         
@@ -27,9 +27,9 @@ const carrito = [];
 
     function eliminarCarrito(index) {
         const producto =carrito[index];
-        const productos = document.querySelectorall(".productos");
-        const productoHTML = Array.from(producto).find(p => p.data.nombre === producto.nombre);
-        productoHTML.data.stock = parseINT(productoHTML.data.stock) + 1;
+        const productos = document.querySelectorAll(".producto");
+        const productoHTML = Array.from(productos   ).find(p => p.dataset.nombre === producto.nombre);
+        productoHTML.dataset.stock = parseInt(productoHTML.dataset.stock) + 1;
 
         carrito.splice(index,1);
         actualizarCarrito();
@@ -44,7 +44,7 @@ const carrito = [];
             li.textContent = `${producto.nombre} - $${producto.precio}`;
             const botonEliminar = document.createElement('button');
             botonEliminar.textContent = 'Eliminar';
-            botonEliminar.addEventListener('click', () => eliminarDelCarrito(index));
+            botonEliminar.addEventListener('click', () => eliminarCarrito(index));
             li.appendChild(botonEliminar);
             carritoElemento.appendChild(li);
         });
