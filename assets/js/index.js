@@ -12,6 +12,7 @@ if(sessionStorage.getItem('carsList') === null){
         }
     })
     .catch((error) => console.log('Error al guardar los vehiculos: ',error))
+
 }else{
     const vehiculos = JSON.parse(sessionStorage.getItem("carsList"))
     addCards(4, vehiculos)
