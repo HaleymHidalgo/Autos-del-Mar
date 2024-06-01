@@ -23,25 +23,18 @@
     <section>
         <div class="flex-column-center fondo-formulario mt-5">
             <img src="./assets/img/isotipo-autos-del-mar.png" alt="">
-            <form action="">
-                <fieldset class="datos-usuario">
-                    <div class="form-group">
-                        <label for="email" class="texto-blanco"> E-mail</label>
-                        <input type="mail" id="txtEmail" class="form-control" placeholder="Correo Electronico">
-                    </div>
-                    <div class="form-group">
-                        <label for="contraseña" class="texto-blanco"> Contraseña</label>
-                        <input type="password" id="pwdContrasenia" class="form-control" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group d-flex justify-content-center m-4">
-                        <!-- Se pueden llamar funciones directamente en el HTML -->
-                        <input type="button"
-                            class="btn btn-primary"
-                            value="Ingresar"
-                            onclick='enviarDatos()' 
-                        >
-                    </div>
-                </fieldset>
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="example@email.com" id="email" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Contra4321" id="password"/>
+                    <small>Error message</small>
+                </div>
+                <button onclick='enviarDatos()'>Confirmar</button>
             </form>
         </div>
         <div class="row ">
