@@ -49,8 +49,6 @@ function eliminarProdCarrito(id) {
             carrito.splice(i, 1)
         }
     }
-
-    actualizarCarrito();
 }
 
 function actualizarCarrito() {
@@ -60,8 +58,6 @@ function actualizarCarrito() {
         const listaProductos = JSON.parse(localStorage.getItem('carritoCompra'))
         listaProductos.map((productosAñadidos) => {
             const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos
-
-            console.log(productosAñadidos);
 
             //Creamos el contendor de los datos
             const contenedorProducto = document.createElement('div')
@@ -86,12 +82,17 @@ function actualizarCarrito() {
             precioProd.textContent = precioProducto
 
             const botonEliminar = document.createElement('button')
-            botonEliminar.addEventListener("click", () => eliminarProdCarrito(idProducto))
+            botonEliminar.textContent = 'Eliminar'
+            botonEliminar.addEventListener("click", async() => {
+                await eliminarProdCarrito(idProducto)
+                actualizarCarrito()
+            })
 
             divDatos.appendChild(idProd)
             divDatos.appendChild(nombreProd)
             divDatos.appendChild(cantidadProd)
             divDatos.appendChild(precioProd)
+            divDatos.appendChild(botonEliminar)
 
             contenedorProducto.appendChild(imgProd)
             contenedorProducto.appendChild(divDatos)
