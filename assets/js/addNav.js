@@ -64,9 +64,10 @@ const createNav = () => {
             </div>`;
 }
     
-const addNav = () => {
+export const addNav = () => {
     const nav = document.getElementById("add_nav");
     nav.innerHTML = createNav();
 }
 
 addNav();
+

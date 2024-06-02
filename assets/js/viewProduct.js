@@ -1,3 +1,6 @@
+import { addNav } from "./addNav.js" 
+import { agregarcarrito } from "./addcarrito.js"
+
 export const viewProduct = async(vehiculo) => {
     const path = '../pageProduct.html'
     
@@ -12,11 +15,16 @@ export const viewProduct = async(vehiculo) => {
         const { id, img, marca, modelo, precio, cantidad, descripcion } = vehiculo;
 
         //Añadimos los datos a la pagina
+
         const modeloProd = doc.getElementById('modeloProd')
         modeloProd.innerHTML = `${modelo}<br>${marca}`
 
         const descipcionProd = doc.getElementById('descripcionProd')
         descipcionProd.textContent = descripcion
+
+        const idProducto = doc.getElementById('idProducto')
+        idProducto.textContent = id
+        idProducto.style.display = 'none'
 
         const precioProd = doc.getElementById('precioProd')
         precioProd.textContent += `${precio} CLP`
@@ -39,11 +47,13 @@ export const viewProduct = async(vehiculo) => {
             imgContenedor.appendChild(caruselItem)
         }
         
-        
-
         //Remplazamos el document con el nuevo
         const newHTML = new XMLSerializer().serializeToString(doc)
         document.body.innerHTML = newHTML
+        addNav();
+        const btnAdd = document.getElementById('btnAdd')
+        btnAdd.addEventListener("click", () => agregarcarrito())
+
     })
     .catch(error => alert(`error al mostrar Producto: ${error}`))
 }

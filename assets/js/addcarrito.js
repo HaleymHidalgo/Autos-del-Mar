@@ -1,51 +1,107 @@
 const carrito = [];
 
-    document.querySelectorAll(".agregar").forEach(button => {
-        button.addEventListener("click", agregarcarrito);
+export const agregarcarrito = () => {
+    console.log('btn presionado');
+    const idProducto = parseInt(document.getElementById('idProducto').textContent)
+    const nombre = document.getElementById('modeloProd').textContent
+    const precio = document.getElementById('precioProd').textContent.slice(8,17)
+    const img = document.querySelector('.img-carrucel')
+    const stock = parseInt(document.getElementById('stockProd').textContent.slice(10,13))
+    if (stock > 0) {
 
-        console.log(button );
-    }); 
+        if(localStorage.getItem('carritoCompra') !== null){
+            const carrito = JSON.parse(localStorage.getItem('carritoCompra'))
+            
+            const producto = {
+                "idProducto":idProducto,
+                "nombreProducto":nombre,
+                "precioProducto":precio,
+                "imgProducto":img.getAttribute('src'),
+                "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
+            }
 
+            carrito.push(producto)
+            localStorage.setItem('carritoCompra', JSON.stringify(carrito))
 
-
-    function agregarcarrito(event) {
-        const producto = event.target.closest('.producto');
-        const nombre = producto.dataset.nombre;
-        const precio = parseFloat(producto.dataset.precio);
-        const stock = parseInt(producto.dataset.stock);
-        
-        if (stock > 0) {
-            carrito.push({nombre, precio});
-            producto.dataset.stock = stock - 1;
-            actualizarCarrito();
+        }else{
+            const producto = [{
+                "idProducto":idProducto,
+                "nombreProducto":nombre,
+                "precioProducto":precio,
+                "imgProducto":img.getAttribute('src'),
+                "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
+            }]
+            localStorage.setItem('carritoCompra', JSON.stringify(producto))
         }
-        
-        else{
-            alert("!PRODUCTO AGOTADO!");
+
+    }
+    
+    else{
+        alert("!PRODUCTO AGOTADO!");
+    }
+}
+
+function eliminarProdCarrito(id) {
+
+    for (let i = 0; i < carrito.length; i++) {
+        const itemCarrito = carrito[i];
+        if(itemCarrito.idProducto === id){
+            carrito.splice(i, 1)
         }
     }
 
-    function eliminarCarrito(index) {
-        const producto =carrito[index];
-        const productos = document.querySelectorAll(".producto");
-        const productoHTML = Array.from(productos   ).find(p => p.dataset.nombre === producto.nombre);
-        productoHTML.dataset.stock = parseInt(productoHTML.dataset.stock) + 1;
+    actualizarCarrito();
+}
 
-        carrito.splice(index,1);
-        actualizarCarrito();
+function actualizarCarrito() {
+    const contenedorProductos = document.getElementById('contenedorProductos')
+
+    if(localStorage.getItem('carritoCompra') !== null){
+        const listaProductos = JSON.parse(localStorage.getItem('carritoCompra'))
+        listaProductos.map((productosAñadidos) => {
+            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos
+
+            console.log(productosAñadidos);
+
+            //Creamos el contendor de los datos
+            const contenedorProducto = document.createElement('div')
+            contenedorProducto.classList.add('col')
+
+            //creamos los datos
+            const imgProd = document.createElement('img')
+            imgProd.setAttribute('src', imgProducto)
+
+            const divDatos = document.createElement('div')
+            
+            const idProd = document.createElement('p')
+            idProd.textContent = idProducto
+
+            const nombreProd = document.createElement('p')
+            nombreProd.textContent = nombreProducto
+
+            const cantidadProd = document.createElement('p')
+            cantidadProd.textContent = cantidadProducto
+
+            const precioProd = document.createElement('p')
+            precioProd.textContent = precioProducto
+
+            const botonEliminar = document.createElement('button')
+            botonEliminar.addEventListener("click", () => eliminarProdCarrito(idProducto))
+
+            divDatos.appendChild(idProd)
+            divDatos.appendChild(nombreProd)
+            divDatos.appendChild(cantidadProd)
+            divDatos.appendChild(precioProd)
+
+            contenedorProducto.appendChild(imgProd)
+            contenedorProducto.appendChild(divDatos)
+
+            contenedorProductos.appendChild(contenedorProducto)
+
+        })
+
     }
 
-    function actualizarCarrito() {
-        const carritoElemento = document.getElementById('carrito');
-        carritoElemento.innerHTML = '';
+}
 
-        carrito.forEach((producto, index) => {
-            const li = document.createElement('li');
-            li.textContent = `${producto.nombre} - $${producto.precio}`;
-            const botonEliminar = document.createElement('button');
-            botonEliminar.textContent = 'Eliminar';
-            botonEliminar.addEventListener('click', () => eliminarCarrito(index));
-            li.appendChild(botonEliminar);
-            carritoElemento.appendChild(li);
-        });
-    }
+actualizarCarrito()
