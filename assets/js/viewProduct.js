@@ -1,5 +1,5 @@
 import { addNav } from "./addNav.js" 
-import { agregarcarrito } from "./addcarrito.js"
+import { agregarcarrito, actualizarCarrito } from "./addcarrito.js"
 
 export const viewProduct = async(vehiculo) => {
     const path = '../pageProduct.html'
@@ -57,3 +57,8 @@ export const viewProduct = async(vehiculo) => {
     })
     .catch(error => alert(`error al mostrar Producto: ${error}`))
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarCarrito();
+    document.getElementById('btnAdd').addEventListener('click', agregarcarrito);
+});

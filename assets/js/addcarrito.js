@@ -43,25 +43,26 @@ export const agregarcarrito = () => {
 
 function eliminarProdCarrito(id) {
 
-    for (let i = 0; i < carrito.length; i++) {
-        const itemCarrito = carrito[i];
-        if(itemCarrito.idProducto === id){
-            carrito.splice(i, 1)
-        }
-    }
-
+    let carrito = JSON.parse(localStorage.getItem('carritoCompra')) || [];
+    carrito = carrito.filter(item => item.idProducto !== id);
+    localStorage.setItem('carritoCompra', JSON.stringify(carrito));
     actualizarCarrito();
 }
 
-function actualizarCarrito() {
+export function actualizarCarrito() {
     const contenedorProductos = document.getElementById('contenedorProductos')
+
+    if (!contenedorProductos) {
+        console.error('El contenedor de productos no existe.');
+        return;
+    }
+
+    contenedorProductos.innerHTML = '';
 
     if(localStorage.getItem('carritoCompra') !== null){
         const listaProductos = JSON.parse(localStorage.getItem('carritoCompra'))
         listaProductos.map((productosAñadidos) => {
-            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos
-
-            console.log(productosAñadidos);
+            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos; 
 
             //Creamos el contendor de los datos
             const contenedorProducto = document.createElement('div')
@@ -100,8 +101,11 @@ function actualizarCarrito() {
 
         })
 
-    }
+    };
 
-}
+};
 
-actualizarCarrito()
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarCarrito();
+    document.getElementById('btnAdd').addEventListener('click', agregarcarrito);
+});
