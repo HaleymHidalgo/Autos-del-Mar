@@ -1,5 +1,5 @@
 import { addNav } from "./addNav.js" 
-import { agregarcarrito } from "./addcarrito.js"
+import { agregarcarrito, actualizarCarrito } from "./addcarrito.js"
 
 export const viewProduct = async(vehiculo) => {
     const path = '../pageProduct.html'
@@ -51,9 +51,16 @@ export const viewProduct = async(vehiculo) => {
         const newHTML = new XMLSerializer().serializeToString(doc)
         document.body.innerHTML = newHTML
         addNav();
+
         const btnAdd = document.getElementById('btnAdd')
+        btnAdd.classList.add("btn", "btn-primary", "boton")
         btnAdd.addEventListener("click", () => agregarcarrito())
 
     })
     .catch(error => alert(`error al mostrar Producto: ${error}`))
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarCarrito();
+    document.getElementById('btnAdd').addEventListener('click', agregarcarrito);
+});

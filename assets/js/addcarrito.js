@@ -1,5 +1,3 @@
-const carrito = [];
-
 export const agregarcarrito = () => {
     console.log('btn presionado');
     const idProducto = parseInt(document.getElementById('idProducto').textContent)
@@ -22,7 +20,10 @@ export const agregarcarrito = () => {
 
             carrito.push(producto)
             localStorage.setItem('carritoCompra', JSON.stringify(carrito))
-
+            swal({
+                title: "Producto Añadido Al Carrito!",
+                icon: "success",
+            });
         }else{
             const producto = [{
                 "idProducto":idProducto,
@@ -32,57 +33,67 @@ export const agregarcarrito = () => {
                 "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
             }]
             localStorage.setItem('carritoCompra', JSON.stringify(producto))
+            swal({ title: "Producto Añadido Al Carrito!", icon: "success"});
         }
-
-    }
-    
-    else{
-        alert("!PRODUCTO AGOTADO!");
+    } else{
+        swal({ title: "Producto Agotado", icon: "error"});
     }
 }
 
 function eliminarProdCarrito(id) {
-
-    for (let i = 0; i < carrito.length; i++) {
-        const itemCarrito = carrito[i];
-        if(itemCarrito.idProducto === id){
-            carrito.splice(i, 1)
-        }
-    }
+    swal({
+        title: "Producto Eliminado del Carrito!",
+        icon: "error",
+    });
+    let carrito = JSON.parse(localStorage.getItem('carritoCompra')) || [];
+    carrito = carrito.filter(item => item.idProducto !== id);
+    localStorage.setItem('carritoCompra', JSON.stringify(carrito));
+    actualizarCarrito();
 }
 
-function actualizarCarrito() {
+export function actualizarCarrito() {
     const contenedorProductos = document.getElementById('contenedorProductos')
+
+    if (!contenedorProductos) {
+        console.error('El contenedor de productos no existe.');
+        return;
+    }
+
+    contenedorProductos.innerHTML = '';
 
     if(localStorage.getItem('carritoCompra') !== null){
         const listaProductos = JSON.parse(localStorage.getItem('carritoCompra'))
         listaProductos.map((productosAñadidos) => {
-            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos
+            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos; 
 
             //Creamos el contendor de los datos
             const contenedorProducto = document.createElement('div')
-            contenedorProducto.classList.add('col')
+            contenedorProducto.classList.add("col-xl-3", "col-lg-6", "col-md-6", "col-sm-12", "col-xs-12", "flex-col-center", "card");
 
             //creamos los datos
             const imgProd = document.createElement('img')
             imgProd.setAttribute('src', imgProducto)
+            imgProd.classList.add('card-img')
 
             const divDatos = document.createElement('div')
+            divDatos.classList.add("card-body");
             
             const idProd = document.createElement('p')
-            idProd.textContent = idProducto
+            idProd.textContent = 'ID:' + idProducto
+            idProd.classList.add("card-title");
 
             const nombreProd = document.createElement('p')
-            nombreProd.textContent = nombreProducto
+            nombreProd.textContent = 'Nombre: ' + nombreProducto
 
             const cantidadProd = document.createElement('p')
-            cantidadProd.textContent = cantidadProducto
+            cantidadProd.textContent = 'Unidades: ' + cantidadProducto
 
             const precioProd = document.createElement('p')
-            precioProd.textContent = precioProducto
+            precioProd.textContent = 'Precio: ' + precioProducto
 
             const botonEliminar = document.createElement('button')
-            botonEliminar.textContent = 'Eliminar'
+            botonEliminar.textContent = 'Eliminar del Carrito'
+            botonEliminar.classList.add("btn", "btn-primary", "boton")
             botonEliminar.addEventListener("click", async() => {
                 await eliminarProdCarrito(idProducto)
                 actualizarCarrito()
@@ -101,8 +112,11 @@ function actualizarCarrito() {
 
         })
 
-    }
+    };
 
-}
+};
 
-actualizarCarrito()
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarCarrito();
+    document.getElementById('btnAdd').addEventListener('click', agregarcarrito);
+});
