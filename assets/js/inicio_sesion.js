@@ -4,53 +4,45 @@ import { setSuccessFor,setErrorFor, isEmail } from "./registro.js";
 const form = document.getElementById('form2');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const boton = document.getElementById('boton_ini')
 
-boton.addEventListener("click", async e => {
+form.addEventListener('submit', async e => {
 	e.preventDefault();
 	
-	console.log("boton apretado")
-	if (checkInputs_inicio()) {
-        try {
-            const user = await getUserByEmail(email.value.trim());
-            console.log("primer if");
-            if (user.email === email.value.trim() && user.password === password.value.trim()) {
-                localStorage.setItem("userData", JSON.stringify(user)); // Guarda el objeto en el LocalStorage como string
-            } else {
-                console.log("Usuario no encontrado");
-            }
-        } catch (error) {
-            console.error("Error al obtener el usuario:", error);
-        }
-    } else {
-        // Lógica para caso contrario
-    }
-	
+	await validacionUser();
 });
 
 
-function checkInputs_inicio(){
-    const emailValue = email.value.trim();
-	const passwordValue = password.value.trim();
-	const user = getUserByEmail(emailValue);
+async function validacionUser() {
+    try {
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
 
-    if(emailValue === '') {
-		setErrorFor(email, 'Email necesario');
-		return false;
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'No ingreso un email válido');
-		return false;
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(passwordValue === '') {
-		setErrorFor(password, 'Necesita una contraseña');
-		return false;
-	} else {
-		setSuccessFor(password);
-	}
+        if (emailValue === '') {
+            setErrorFor(email, 'Email necesario');
+            return false;
+        } else if (!isEmail(emailValue)) {
+            setErrorFor(email, 'No ingresó un email válido');
+            return false;
+        } else {
+            setSuccessFor(email);
+        }
 
-		return true
+        if (passwordValue === '') {
+            setErrorFor(password, 'Necesita una contraseña');
+            return false;
+        } else {
+            setSuccessFor(password);
+        }
+
+        const user = await getUserByEmail(emailValue);
+
+        if (user.email === emailValue && user.password === passwordValue) {
+            localStorage.setItem("userData", JSON.stringify(user));
+            console.log("Usuario encontrado y guardado en localStorage");
+        } else {
+            console.log("Usuario no encontrado o contraseña incorrecta");
+        }
+    } catch (error) {
+        console.error("Error al obtener el usuario:", error);
+    }
 }
-
