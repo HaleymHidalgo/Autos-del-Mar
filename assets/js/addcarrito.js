@@ -29,14 +29,14 @@ export const agregarcarrito = () => {
                 icon: "success",
             });
         }else{
-            const producto = [{
+            const producto = {
                 "idProducto":idProducto,
-                "modeloProducto":nombre,
-                "marcaProdcuto":marca,
+                "modeloProducto":modelo,
+                "marcaProducto":marca,
                 "precioProducto":precio,
                 "imgProducto":img.getAttribute('src'),
                 "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
-            }]
+            }
             localStorage.setItem('carritoCompra', JSON.stringify(producto))
             swal({ title: "Producto Añadido Al Carrito!", icon: "success"});
         }
