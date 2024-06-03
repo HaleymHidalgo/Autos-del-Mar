@@ -93,7 +93,7 @@ export function actualizarCarrito() {
             cantidadProd.textContent = 'Unidades: ' + cantidadProducto
 
             const precioProd = document.createElement('p')
-            precioProd.textContent = precioProducto
+            precioProd.textContent = toDivisa(precioProducto)
 
             const botonEliminar = document.createElement('button')
             botonEliminar.textContent = 'Eliminar'

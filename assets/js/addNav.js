@@ -32,13 +32,13 @@ const createNav = () => {
                     </ul>
                     
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                             <a class="nav-link active" href="./index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                             <a class="nav-link" href="./catalogo.html">Catalogo</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                             <a class="nav-link" href="./Nosotros.html">Nosotros</a>
                         </li>
 
@@ -49,14 +49,14 @@ const createNav = () => {
                         <li class="nav-item line-user">
                             <a class="nav-link">|</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                             <a class="nav-link" href="./iniciar_sesion.html">Sign in</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                             <a class="nav-link" href="./registrar_sesion.html"">Sign up</a>
                         </li>
                         <!-- no se vera hasta haberse autenticado -->
-                        <li class="nav-item d-none">
+                        <li class="nav-item flex-column-center d-none">
                             <a class="nav-link" href="./perfil.html"><img src="./assets/img/person-circle.svg" alt="Login-icon" class="logo"></a>
                         </li>
                     </ul>  
