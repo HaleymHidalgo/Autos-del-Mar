@@ -14,7 +14,6 @@ form.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-	// trim to remove the whitespaces
 	const nombreValue = nombre.value.trim();
     const apellidoValue = apellido.value.trim();
     const rutValue = rut.value.trim();
@@ -30,13 +29,13 @@ function checkInputs() {
 	}
 
     if(apellidoValue === '') {
-		setErrorFor(apellido, 'apellido necesario');
+		setErrorFor(apellido, 'Apellido necesario');
 	} else {
 		setSuccessFor(apellido);
 	}
 
     if(rutValue === '') {
-		setErrorFor(rut, 'rut necesario');
+		setErrorFor(rut, 'Rut necesario');
 	} else if (!isRut(rutValue)){
         setErrorFor(rut, 'No ingreso un rut valido ej:(99.999.999-k)');
     } else {
@@ -44,7 +43,7 @@ function checkInputs() {
 	}
 
     if(telefonoValue === '') {
-		setErrorFor(telefono, 'telefono necesario');
+		setErrorFor(telefono, 'Telefono necesario');
 	} else {
 		setSuccessFor(telefono);
 	}
@@ -55,12 +54,18 @@ function checkInputs() {
 		setErrorFor(email, 'No ingreso un email válido');
 	} else {
 		setSuccessFor(email);
+		if (setSuccessFor(email)){
+			//funcion para guardar el email
+		}
 	}
 	
 	if(passwordValue === '') {
 		setErrorFor(password, 'Necesita una contraseña');
 	} else {
 		setSuccessFor(password);
+		if (setSuccessFor(password)){
+			//funcion para guardar la contraseña
+		}
 	}
 	
 	if(password2Value === '') {

@@ -20,10 +20,10 @@
 </head>
 
 <body>
-    <section>
+    <section id="registro">
         <div class="flex-column-center fondo-formulario mt-5">
             <img src="./assets/img/isotipo-autos-del-mar.png" alt="">
-            <form id="form" class="form">
+            <form id="form2" class="form">
                 <div class="form-control">
                     <label for="email">Email</label>
                     <input type="email" placeholder="example@email.com" id="email" />
@@ -34,18 +34,12 @@
                     <input type="password" placeholder="Contra4321" id="password"/>
                     <small>Error message</small>
                 </div>
-                <button onclick='enviarDatos()'>Confirmar</button>
+                <button type="button" id="boton_ini">Confirmar</button>
             </form>
         </div>
-        <div class="row ">
-            <div class="col-12 ">
-                <hr class="mt-5 mb-4 border-secondary-subtle">
-                <div class="d-flex gap-2 gap-md-4 flex-row-center" >
-                    <a href="./registrar_sesion.html" class="text-decoration-none color-blanco ">Crear cuenta</a>
-                    <a href="#" class=" text-decoration-none color-blanco">Olvide mi contraseña</a>
-                </div>
-            </div>
-        </div>
     </section>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/acceso.js"></script>
 </body>

@@ -179,6 +179,9 @@ a{
 }
 
 .form-control {
+    color: white;
+    background-color: #454545;
+    border-color: #454545;
 	margin-bottom: 10px;
 	padding-bottom: 20px;
 	position: relative;
@@ -190,7 +193,7 @@ a{
 }
 
 .form-control input {
-	border: 2px solid #f0f0f0;
+	border: 2px solid #fffefe;
 	border-radius: 4px;
 	display: block;
 	font-family: inherit;
@@ -217,16 +220,6 @@ a{
 	position: absolute;
 	top: 40px;
 	right: 10px;
-}
-
-.form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
 }
 
 .form-control small {
