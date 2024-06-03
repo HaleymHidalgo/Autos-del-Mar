@@ -1,5 +1,4 @@
 export const agregarcarrito = () => {
-    console.log('btn presionado');
     const idProducto = parseInt(document.getElementById('idProducto').textContent)
     const nombre = document.getElementById('modeloProd').textContent
     const precio = document.getElementById('precioProd').textContent.slice(8,17)
