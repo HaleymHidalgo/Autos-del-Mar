@@ -42,7 +42,7 @@ const createNav = () => {
                             <a class="nav-link" href="./Nosotros.html">Nosotros</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item flex-column-center">
                         <a href="./carrito.html"><img class="logo" src="./assets/img/logo-carrito.png" alt="logo-carrito"></a>
                         </li>
                         

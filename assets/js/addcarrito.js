@@ -1,8 +1,11 @@
+import { toNumber, toDivisa } from "./precios.js";
+
 export const agregarcarrito = () => {
     console.log('btn presionado');
     const idProducto = parseInt(document.getElementById('idProducto').textContent)
-    const nombre = document.getElementById('modeloProd').textContent
-    const precio = document.getElementById('precioProd').textContent.slice(8,17)
+    const modelo = document.getElementById('modeloProd').textContent
+    const marca = document.getElementById('marcaProd').textContent
+    const precio = toNumber(document.getElementById('precioProd').textContent)
     const img = document.querySelector('.img-carrucel')
     const stock = parseInt(document.getElementById('stockProd').textContent.slice(10,13))
     if (stock > 0) {
@@ -12,7 +15,8 @@ export const agregarcarrito = () => {
             
             const producto = {
                 "idProducto":idProducto,
-                "nombreProducto":nombre,
+                "modeloProducto":modelo,
+                "marcaProducto":marca,
                 "precioProducto":precio,
                 "imgProducto":img.getAttribute('src'),
                 "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
@@ -27,7 +31,8 @@ export const agregarcarrito = () => {
         }else{
             const producto = [{
                 "idProducto":idProducto,
-                "nombreProducto":nombre,
+                "modeloProducto":nombre,
+                "marcaProdcuto":marca,
                 "precioProducto":precio,
                 "imgProducto":img.getAttribute('src'),
                 "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
@@ -54,46 +59,45 @@ function eliminarProdCarrito(id) {
 export function actualizarCarrito() {
     const contenedorProductos = document.getElementById('contenedorProductos')
 
-    if (!contenedorProductos) {
-        console.error('El contenedor de productos no existe.');
-        return;
-    }
-
     contenedorProductos.innerHTML = '';
 
     if(localStorage.getItem('carritoCompra') !== null){
         const listaProductos = JSON.parse(localStorage.getItem('carritoCompra'))
+        let precioTotal = 0
         listaProductos.map((productosAñadidos) => {
-            const { idProducto, cantidadProducto, nombreProducto, precioProducto, imgProducto} = productosAñadidos; 
+            const { idProducto, cantidadProducto, marcaProducto, modeloProducto, precioProducto, imgProducto} = productosAñadidos; 
 
-            //Creamos el contendor de los datos
-            const contenedorProducto = document.createElement('div')
-            contenedorProducto.classList.add("col-xl-3", "col-lg-6", "col-md-6", "col-sm-12", "col-xs-12", "flex-col-center", "card");
+            const producto = document.createElement('article')
+            producto.classList.add('fondo-seccion', 'flex-row-center', 'row', 'texto-blanco')
 
             //creamos los datos
             const imgProd = document.createElement('img')
             imgProd.setAttribute('src', imgProducto)
-            imgProd.classList.add('card-img')
+            imgProd.setAttribute('alt', `${modeloProducto} - ${marcaProducto}`)
+            imgProd.classList.add('imgCarrito', 'col-xl-6', 'col-md-7')
 
             const divDatos = document.createElement('div')
-            divDatos.classList.add("card-body");
+            divDatos.classList.add('flex-column-center', 'col-xl-6', 'col-md-5')
             
             const idProd = document.createElement('p')
             idProd.textContent = 'ID:' + idProducto
             idProd.classList.add("card-title");
 
             const nombreProd = document.createElement('p')
-            nombreProd.textContent = 'Nombre: ' + nombreProducto
+            nombreProd.textContent = modeloProducto
+
+            const marcaProd = document.createElement('p')
+            marcaProd.textContent = marcaProducto
 
             const cantidadProd = document.createElement('p')
             cantidadProd.textContent = 'Unidades: ' + cantidadProducto
 
             const precioProd = document.createElement('p')
-            precioProd.textContent = 'Precio: ' + precioProducto
+            precioProd.textContent = precioProducto
 
             const botonEliminar = document.createElement('button')
-            botonEliminar.textContent = 'Eliminar del Carrito'
-            botonEliminar.classList.add("btn", "btn-primary", "boton")
+            botonEliminar.textContent = 'Eliminar'
+            botonEliminar.classList.add("btn", "btn-danger")
             botonEliminar.addEventListener("click", async() => {
                 await eliminarProdCarrito(idProducto)
                 actualizarCarrito()
@@ -101,20 +105,45 @@ export function actualizarCarrito() {
 
             divDatos.appendChild(idProd)
             divDatos.appendChild(nombreProd)
+            divDatos.appendChild(marcaProd)
             divDatos.appendChild(cantidadProd)
             divDatos.appendChild(precioProd)
             divDatos.appendChild(botonEliminar)
 
-            contenedorProducto.appendChild(imgProd)
-            contenedorProducto.appendChild(divDatos)
+            producto.appendChild(imgProd)
+            producto.appendChild(divDatos)
 
-            contenedorProductos.appendChild(contenedorProducto)
+            contenedorProductos.appendChild(producto)
 
+            precioTotal += precioProducto
         })
 
-    };
+        //Aside de pago
+        const precio = document.getElementById('precioTotal')
+        //ARREGLAR -> añadir la funcion toDivisa() cuando este en formato numerico
+        precio.textContent = toDivisa(precioTotal)
 
-};
+        document.getElementById('btnComprar').addEventListener('click', () => {
+            //validar que el precio sea > 0
+            if(toNumber(precio.textContent) > 0){
+                realizarCompra(precio.textContent)
+            }
+        })
+
+    }
+
+}
+
+//Para guardar en la BD la compra, pasamos los datos por parametro
+const realizarCompra = (datosCompra) => {
+    //Recopila la informacion
+
+    //Pasarela de pago
+
+    //mensaje de exito / error
+    swal({title:'Compra Realizada con Exito!', text:`Total: ${datosCompra}` , icon:'success'})
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();

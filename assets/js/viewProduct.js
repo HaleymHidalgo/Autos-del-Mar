@@ -1,5 +1,6 @@
 import { addNav } from "./addNav.js" 
 import { agregarcarrito, actualizarCarrito } from "./addcarrito.js"
+import { toDivisa } from "./precios.js"
 
 export const viewProduct = async(vehiculo) => {
     const path = '../pageProduct.html'
@@ -17,7 +18,10 @@ export const viewProduct = async(vehiculo) => {
         //Añadimos los datos a la pagina
 
         const modeloProd = doc.getElementById('modeloProd')
-        modeloProd.innerHTML = `${modelo}<br>${marca}`
+        modeloProd.innerHTML = modelo
+
+        const marcaProd = doc.getElementById('marcaProd')
+        marcaProd.innerHTML = marca
 
         const descipcionProd = doc.getElementById('descripcionProd')
         descipcionProd.textContent = descripcion
@@ -27,7 +31,7 @@ export const viewProduct = async(vehiculo) => {
         idProducto.style.display = 'none'
 
         const precioProd = doc.getElementById('precioProd')
-        precioProd.textContent += `${precio} CLP`
+        precioProd.textContent += precio
 
         const stockProd = doc.getElementById('stockProd')
         stockProd.textContent += `${cantidad} Unidades`

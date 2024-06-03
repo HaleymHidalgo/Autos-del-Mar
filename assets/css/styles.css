@@ -176,3 +176,24 @@ a{
     background: #202020;
     box-shadow: inset 0px 10px 50px 5px rgba(0, 0, 0, 0.4);
 }
+
+/*Styles for carrito*/
+.precio-background{
+    background-color: #424242;
+    height: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    margin: 0px 1.5rem;
+    padding: 10px;
+}
+
+.imgCarrito{
+    border-radius: 25px;
+    background-color: white;
+    aspect-ratio: 16/9;
+    height: 100%;
+}
+
+aside{
+    padding: 0px;
+}
