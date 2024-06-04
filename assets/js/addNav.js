@@ -1,4 +1,4 @@
-const crearNavbar = () => {
+export const addNav = () => {
     // Crear el contenedor principal del navbar
     const contenedor = document.createElement('div');
     contenedor.classList.add('container-fluid');
@@ -107,6 +107,7 @@ const crearNavbar = () => {
     enlaceSeparador.textContent = '|';
     separador.appendChild(enlaceSeparador);
 
+    // Cosas
     const signIn = document.createElement('li');
     signIn.classList.add('nav-item', 'flex-column-center');
     const enlaceSignIn = document.createElement('a');
@@ -124,7 +125,7 @@ const crearNavbar = () => {
     signUp.appendChild(enlaceSignUp);
 
     const perfil = document.createElement('li');
-    perfil.classList.add('nav-item', 'flex-column-center', 'd-none');
+    perfil.classList.add('nav-item', 'flex-column-center');
     const enlacePerfil = document.createElement('a');
     enlacePerfil.classList.add('nav-link');
     enlacePerfil.href = './perfil.html';
@@ -141,9 +142,13 @@ const crearNavbar = () => {
     listaNav.appendChild(nosotros);
     listaNav.appendChild(carrito);
     listaNav.appendChild(separador);
-    listaNav.appendChild(signIn);
-    listaNav.appendChild(signUp);
-    listaNav.appendChild(perfil);
+
+    if(localStorage.getItem('userData') === null){
+        listaNav.appendChild(signIn);
+        listaNav.appendChild(signUp);
+    }else{
+        listaNav.appendChild(perfil);
+    }
 
     // Agregar todas las listas al contenido del navbar
     contenidoNav.appendChild(listabuscador);
@@ -162,4 +167,4 @@ const crearNavbar = () => {
 }
 
 // Llamar a la función para crear e insertar el navbar
-crearNavbar();
+addNav();
