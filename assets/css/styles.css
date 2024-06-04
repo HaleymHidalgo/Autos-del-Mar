@@ -76,6 +76,9 @@ a{
 .card:hover{
     cursor: pointer;
 }
+.card:hover{
+    cursor: pointer;
+}
 
 .fondo-seccion{
     background-color: #424242;    
@@ -92,6 +95,8 @@ a{
 
 /* Por Borrar*/
 
+/* Por Borrar*/
+
 .card a{
     color:black;
     text-decoration:none;
@@ -100,7 +105,9 @@ a{
 .card-img{
     margin: 1rem auto;
     max-width: 14rem;
+    max-width: 14rem;
     aspect-ratio: 16/9;
+    background-color: white;
     background-color: white;
 }
 
@@ -125,20 +132,12 @@ a{
 }
 
 /* Profile */
+
 .flex-column-center{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.fondo-formulario{
-    background-color: #454545; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    max-width: 40rem;
-    margin: 2rem auto;
-    padding: 20px 0;
 }
 
 .img-user{
@@ -155,6 +154,100 @@ a{
     margin-bottom: 20px;
 }
 
+.no-lista-style{
+    list-style: none;
+    padding: 0;
+}
+
+/*Formulario*/
+
+.fondo-formulario{
+    background-color: #454545; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 20px 0;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+    color: white;
+    background-color: #454545;
+    border-color: #454545;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #fffefe;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #3788AA;
+	border: 2px solid #3788AA;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+/*color textos*/
+.texto-negro{
+    color: black;
+}
+
 .texto-blanco{
     color: white;;
 }
@@ -165,11 +258,6 @@ a{
 
 .texto-azul{
     color: #3788AA;
-}
-
-.no-lista-style{
-    list-style: none;
-    padding: 0;
 }
 
 .footer{
