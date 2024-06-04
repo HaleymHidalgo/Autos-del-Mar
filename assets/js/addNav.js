@@ -1,3 +1,9 @@
+const buscarMarca = () => {
+    const marca = document.getElementById('inputText').textContent
+    const rowcards = document.getElementById('rowCards')
+    
+}
+
 export const addNav = () => {
     // Crear el contenedor principal del navbar
     const contenedor = document.createElement('div');
@@ -48,12 +54,14 @@ export const addNav = () => {
     inputBuscador.classList.add('bus', 'me-2');
     inputBuscador.type = 'search';
     inputBuscador.placeholder = 'Search';
+    inputBuscador.setAttribute('id', 'inputText')
     inputBuscador.setAttribute('aria-label', 'Search');
     
     const botonBuscador = document.createElement('button');
     botonBuscador.classList.add('btn', 'btn-outline-info');
     botonBuscador.type = 'submit';
     botonBuscador.textContent = 'Search';
+    botonBuscador.addEventListener('click', () => buscarMarca())
     
     formularioBuscador.appendChild(inputBuscador);
     formularioBuscador.appendChild(botonBuscador);
