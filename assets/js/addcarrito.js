@@ -12,7 +12,7 @@ export const agregarcarrito = () => {
 
         if(localStorage.getItem('carritoCompra') !== null){
             const carrito = JSON.parse(localStorage.getItem('carritoCompra'))
-            
+            console.log(carrito)
             const producto = {
                 "idProducto":idProducto,
                 "modeloProducto":modelo,
@@ -37,7 +37,7 @@ export const agregarcarrito = () => {
                 "imgProducto":img.getAttribute('src'),
                 "cantidadProducto": 1 //Aqui se trae cuantas u/producto agrego
             }
-            localStorage.setItem('carritoCompra', JSON.stringify(producto))
+            localStorage.setItem('carritoCompra', JSON.stringify([producto]))
             swal({ title: "Producto Añadido Al Carrito!", icon: "success"});
         }
     } else{
