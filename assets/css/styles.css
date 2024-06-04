@@ -125,6 +125,7 @@ a{
 }
 
 /* Profile */
+
 .flex-column-center{
     display: flex;
     flex-direction: column;
@@ -144,18 +145,6 @@ a{
     border-radius: 10px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
-}
-
-.texto-blanco{
-    color: white;;
-}
-
-.texto-gris{
-    color: rgba(175, 175, 175, 0.705);;
-}
-
-.texto-azul{
-    color: #3788AA;
 }
 
 .no-lista-style{
@@ -245,4 +234,21 @@ a{
 	padding: 10px;
 	margin-top: 20px;
 	width: 100%;
+}
+
+/*color textos*/
+.texto-negro{
+    color: black;
+}
+
+.texto-blanco{
+    color: white;;
+}
+
+.texto-gris{
+    color: rgba(175, 175, 175, 0.705);;
+}
+
+.texto-azul{
+    color: #3788AA;
 }
